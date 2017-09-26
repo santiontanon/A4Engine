@@ -419,7 +419,7 @@ A4EventRule::~A4EventRule()
 
 int A4EventRule::executeEffects(A4Object *p, class A4Map *map, class A4Game *game, A4Character *otherCharacter)
 {
-    if (m_once && m_executed) return false;
+    if (m_once && m_executed) return SCRIPT_FINISHED;
     m_executed = true;
 	int retValue = SCRIPT_FINISHED;
     A4ScriptExecutionQueue *seq = 0;
@@ -454,7 +454,7 @@ int A4EventRule::executeEffects(A4Object *p, class A4Map *map, class A4Game *gam
 
 int A4EventRule::execute(class A4Object *o, class A4Map *map, class A4Game *game, class A4Character *otherCharacter)
 {
-    if (m_once && m_executed) return false;
+    if (m_once && m_executed) return SCRIPT_FINISHED;
     
 	// check if the condition is met first:
     switch(m_event) {

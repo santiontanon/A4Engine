@@ -141,7 +141,7 @@ private:
 	GraphicFile **m_gfs;
 	int *m_gfs_startTile;
 	int *m_tiles;
-	int *m_seeThrough;
+//	int *m_seeThrough;
 	int *m_canDig;
 	std::list<A4Object *> m_objects;
 

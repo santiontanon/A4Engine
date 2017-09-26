@@ -71,7 +71,7 @@ bool A4PlayerCharacter::loadObjectAttribute(XMLNode *attribute_xml)
 {
     if (A4Character::loadObjectAttribute(attribute_xml)) return true;
     
-    // Thi functino is just so that we can reuse object class definitions between Players and AI characters.
+    // Thi function is just so that we can reuse object class definitions between Players and AI characters.
     char *a_name = attribute_xml->get_attribute("name");
     if (strcmp(a_name,"sightRadius")==0) {
         return true;

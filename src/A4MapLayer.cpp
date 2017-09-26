@@ -73,11 +73,11 @@ A4MapLayer::A4MapLayer(int dx, int dy, int n_gfs, GraphicFile **gfs) {
         startTile += gfs[i]->getNTiles();
     }
     m_tiles = new int[m_dx*m_dy];
-    m_seeThrough = new int[m_dx*m_dy];
+//    m_seeThrough = new int[m_dx*m_dy];
     m_canDig = new int[m_dx*m_dy];
     for(int i = 0;i<m_dx*m_dy;i++) {
         m_tiles[i] = -1;
-        m_seeThrough[i] = m_canDig[i] = 0;
+//        m_seeThrough[i] = m_canDig[i] = 0;
     }
     m_gl_tiles = 0;
 
@@ -88,7 +88,7 @@ A4MapLayer::A4MapLayer(int dx, int dy, int n_gfs, GraphicFile **gfs) {
 
 A4MapLayer::~A4MapLayer() {
     delete m_tiles;
-    delete m_seeThrough;
+//    delete m_seeThrough;
     delete m_canDig;
     if (m_gl_tiles!=0) delete m_gl_tiles;
     m_gl_tiles = 0;

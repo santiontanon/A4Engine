@@ -1169,7 +1169,6 @@ void A4Game::drawHUD(int SCREEN_X,int SCREEN_Y)
 
 void A4Game::drawWorld(int SCREEN_X,int SCREEN_Y)
 {
-
 	if (m_current_player!=0) {
 		A4Map *map = m_current_player->getMap();
 		int mapx = getCameraX(m_current_player, map->getDx()*m_tile_dx, SCREEN_X);

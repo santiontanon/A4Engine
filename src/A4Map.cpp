@@ -160,6 +160,7 @@ A4Map::A4Map(XMLNode *tmx_xml, A4Game *game, std::vector<std::pair<XMLNode *, A4
 {
     m_name = 0;
     m_name_symbol = 0;
+    m_cycle = 0;
     m_xml = tmx_xml;
 //	tmx_xml->print(0);
 	m_dx = atoi(tmx_xml->get_attribute("width"));
@@ -1191,7 +1192,7 @@ void A4Map::saveToXML(XMLwriter *w, A4Game *game)
             w->openTag("storyState");
             w->setAttribute("variable", *it1);
             w->setAttribute("value", *it2);
-            w->setAttribute("scope", "game");
+            w->setAttribute("scope", "map");
             w->closeTag("storyState");
             it1++;
             it2++;

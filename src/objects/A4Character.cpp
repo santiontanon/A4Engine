@@ -1345,7 +1345,7 @@ void A4Character::savePropertiesToXML(XMLwriter *w, A4Game *game)
     w->setAttribute("levelupadd", m_defense_levelupadd);
     w->closeTag("attribute");
 
-    saveObjectAttributeToXML(w,"attack_modifier",m_defense_modifier);
+    saveObjectAttributeToXML(w,"attack_modifier",m_attack_modifier);
     saveObjectAttributeToXML(w,"defense_modifier",m_defense_modifier);
     saveObjectAttributeToXML(w,"magicImmune",m_magicImmune);
     if (m_vehicle!=0) saveObjectAttributeToXML(w,"vehicle",m_vehicle->getID());

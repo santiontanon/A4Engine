@@ -537,9 +537,6 @@ void A4EventRule::saveToXML(XMLwriter *w)
         w->setAttribute("variable", m_variable);
         w->setAttribute("value", m_value);
         if (m_once)w->setAttribute("once", "true");
-        for(A4Script *s:m_effects) {
-            s->saveToXML(w);
-        }
     }
     
     if (m_event==A4_EVENT_ACTION_TAKE) {

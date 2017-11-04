@@ -1123,7 +1123,7 @@ void A4Script::saveToXML(XMLwriter *w)
             if (ID!=0) w->setAttribute("topic", ID);
             if (value!=A4_TALK_PERFORMATIVE_NONE) w->setAttribute("performative", A4Game::performativeNames[value]);
             if (angry) w->setAttribute("angry", "true");
-            if (angry) w->setAttribute("wait", "true");
+            if (wait) w->setAttribute("wait", "true");
             break;
         }
         case A4_SCRIPT_PENDINGTALK:
@@ -2413,7 +2413,6 @@ int execute_spell(A4Script *script, A4Object *o, A4Map *map, A4Game *game, A4Cha
                 }
             }
         }
-        return false;
     }
     return SCRIPT_FAILED;
 }

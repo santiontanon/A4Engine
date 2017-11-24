@@ -253,7 +253,7 @@ int A4Door::getPixelWidth()
 
 int A4Door::getPixelHeight()
 {
-    if (m_pixel_width_cache_cycle == m_cycle) return m_pixel_width_cache;
+    if (m_pixel_width_cache_cycle == m_cycle) return m_pixel_height_cache;
     int dx1 = (m_animations[A4_ANIMATION_CLOSED]==0 ? 0:m_animations[A4_ANIMATION_CLOSED]->getPixelWidth());
     int dy1 = (m_animations[A4_ANIMATION_CLOSED]==0 ? 0:m_animations[A4_ANIMATION_CLOSED]->getPixelHeight());
     int dx2 = (m_animations[A4_ANIMATION_OPEN]==0 ? 0:m_animations[A4_ANIMATION_OPEN]->getPixelWidth());

@@ -430,10 +430,10 @@ int A4Object::canMove(int direction, int slack, bool treatBridgesAsWalls)
     }
     
     if (WALK_TILE_BY_TILE) {
-        if (m_map->walkable(m_x+A4Game::direction_x_inc[direction]*getPixelWidth(),
-                            m_y+A4Game::direction_y_inc[direction]*getPixelHeight(),
-                            getPixelWidth(),
-                            getPixelHeight(),this)) return 0;
+        if (m_map->walkableConsideringVehicles(m_x+A4Game::direction_x_inc[direction]*getPixelWidth(),
+                                               m_y+A4Game::direction_y_inc[direction]*getPixelHeight(),
+                                               getPixelWidth(),
+                                               getPixelHeight(),this)) return 0;
     } else {
         if (direction==A4_DIRECTION_LEFT) {
             bool positiveStillGood = true;
